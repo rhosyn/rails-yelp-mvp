@@ -1,0 +1,9 @@
+<div class="container">
+
+  <h2> <%= "Your review of #{@restaurant.name}" %> </h2>
+  <p> <%= "Review: #{@review.content}" %> </p>
+  <p> <%= "Rating: #{@review.rating}" %> </p>
+<hr />
+
+<%= link_to 'Back', restaurants_path %>
+</div>

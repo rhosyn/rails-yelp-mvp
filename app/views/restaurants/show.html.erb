@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<div class="container"><p id="notice"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
@@ -12,13 +12,16 @@
 
 <p>
   <strong>Phonenumber:</strong>
-  <%= @restaurant.phonenumber %>
+  <%= @restaurant.phone_number %>
 </p>
 
 <p>
   <strong>Category:</strong>
-  <%= @restaurant.category %>
+  <%= @restaurant.category.capitalize %>
 </p>
+<hr />
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<%= link_to 'Back to restaurant overview', restaurants_path %>
+<hr />
+<%= link_to 'Add new review', new_restaurant_review_path(@restaurant) %>
+</div>
